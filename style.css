@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
     background: linear-gradient(135deg, #dfdfdf 0%, #fefdff 100%)
 }
 
@@ -23,6 +23,7 @@ hr {
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 main {
@@ -101,61 +102,101 @@ main {
 /* =============================================================NAVBAR=============================================================*/
 /* =============================================================NAVBAR=============================================================*/
 /* =============================================================NAVBAR=============================================================*/
-
-
 nav {
     position: sticky;
     top: 0;
-    width: 100vw;
-    height: 6vh;
     padding: 0px;
     margin-top: 1px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 
     background: #220b39;
     z-index: 9998;
 }
 
-#logo {
-    justify-content: flex-start;
-    flex: 1;
-
-    font-size: 23px;
-
-
+nav ul {
+    list-style-type: none;
+    padding:0;
 }
 
-#logo #start-button {
-    text-decoration: none;
-    color: aliceblue;
-    text-shadow: 0 0 20px aliceblue;
-    font-family: "Playwrite AR", cursive;
-    padding: 8px;
+.menu-btn {
+    display: none;
 }
 
 #references {
-    justify-content: flex-end;
-    padding-right: 8px;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0;
+
+    list-style-type: none;
     font-size: 23px;
 }
 
-#references .reference {
-    margin: 0px 10px;
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
 
     text-decoration: none;
     color: aliceblue;
     text-shadow: 0 0 10px aliceblue;
     font-family: "Zilla Slab", serif;
-
 }
 
-#references a:hover {
-    background: #1a0b2e;
+nav a:hover {
+    background-color: #1a0b2e;
     border-bottom: 2px solid aliceblue;
+    color: aliceblue
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+#iwannacentertsrq {
+    text-align: center;
+    align-content: center;
+}
+
+#start-button {
+    text-shadow: 0 0 20px aliceblue;
+    font-family: "Playwrite AR", cursive;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 9999;
+    background-color: rgba(34, 11, 57, 0.5);
+    backdrop-filter: blur(10px);
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
 }
 
 /* ============================================================= INTRO ============================================================= */
@@ -169,8 +210,8 @@ nav {
 }
 
 #introductory-paragraph {
-    width: 50%;
-    height: 100%;
+    width: 50vw;
+    height: 50vh;
     border-right: 2px solid rgb(169, 169, 169);
     text-align: center;
     align-content: center;
@@ -244,6 +285,10 @@ nav {
 /* ============================================================= SKILLS ============================================================= */
 /* ============================================================= SKILLS ============================================================= */
 /* ============================================================= SKILLS ============================================================= */
+#Skills {
+    padding-top: 2rem;
+}
+
 #Technical-Skills {
     width: 100%;
     height: auto;
@@ -267,11 +312,11 @@ nav {
     align-items: center;
     justify-content: center;
 
-    padding: 15px 15px 15px 10px;
+    padding: 3rem;
     margin: 30px 20px 0px 20px;
 
     font-family: "Zilla Slab", serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .technicalSkill-pt:hover {
@@ -300,10 +345,17 @@ nav {
 /* =============================================================PROJECTS=============================================================*/
 /* =============================================================PROJECTS=============================================================*/
 /* =============================================================PROJECTS=============================================================*/
+#Projects {
+    padding-top: 2rem;
+}
 
 /* =============================================================INTERESTS=============================================================*/
 /* =============================================================INTERESTS=============================================================*/
 /* =============================================================INTERESTS=============================================================*/
+#Interests {
+    padding-top: 2rem;
+}
+
 #interests-page {
     width: 100%;
     height: auto;
@@ -321,10 +373,7 @@ nav {
 
 .interest-pt {
     width: 100%;
-
-
     background-color: #09030f;
-
     display: flex;
     flex-direction: row;
 }
@@ -355,45 +404,12 @@ nav {
     max-height: 400px;
 }
 
-/* =============================================================FOOTER=============================================================*/
-/* =============================================================FOOTER=============================================================*/
-/* =============================================================FOOTER=============================================================*/
-footer {
-    max-height: 50vh;
-    background-color: #1a0b2e;
-    color: aliceblue;
+/* =============================================================CONTACT ME=============================================================*/
+/* =============================================================CONTACT ME=============================================================*/
+/* =============================================================CONTACT ME=============================================================*/
 
-    display: flex;
-    align-items: Center;
-}
-
-.footer {
-    margin: 0px;
-    padding: 0px;
-    width: 80%;
-    height: 30vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 24px;
-    border-left: 2px solid gray
-}
-
-.footer p {
-    margin: 0px;
-    padding: 0px;
-
-    font-size: 24px
-}
-
-#lwkidekwhattonametheseanymoreimsick {
-    border: 2rem solid #1a0b2e;
+#idekanymorebcimsick {
     padding: 1rem;
-    background-color: white;
-    width: 100%;
     justify-content: flex-start;
 }
 
@@ -403,38 +419,82 @@ footer {
     color: black
 }
 
+#ContactTitle {
+    text-align: center;
+}
+
 /* TEXTBOXES */
-#name {
-    margin-bottom: 3vh;
-    max-height: 2vh;
-    border: none;
-    background: none;
-    border-bottom: 2px solid black;
-    color: White;
-}
 
-#email {
-    margin-bottom: 3vh;
-    max-height: 2vh;
-    border: none;
-    background: none;
-    border-bottom: 2px solid black;
-    color: white;
-}
+#ContactMe {
+    max-width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 20px;
 
-#message {
-    max-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    border: none;
-    background: none;
-    border-bottom: 2px solid black;
-    color: white;
-}
-
-#SubmitBtn {
-    border: none;
     background-color: #1a0b2e;
-    color: white;
+    color: white
+}
+
+#ContactMe form {
+    width: 80%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type='submit'] {
+    background-color: #fff;
+    color: #1a0b2e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type='submit']:hover {
+    background-color: #dedede;
+}
+
+/* =============================================================FOOTER=============================================================*/
+/* =============================================================FOOTER=============================================================*/
+/* =============================================================FOOTER=============================================================*/
+footer {
+    height: auto;
+    background-color: #1a0b2e;
+    color: aliceblue;
+
+    display: flex;
+    align-items: Center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* ============================================================= RESPONSIVENESS ============================================================= */
@@ -445,18 +505,26 @@ footer {
 /* ============================================================= RESPONSIVENESS ============================================================= */
 /* ============================================================= RESPONSIVENESS ============================================================= */
 /* ============================================================= RESPONSIVENESS ============================================================= */
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
     #abt-me-section {
         display: flex;
         flex-direction: column;
     }
 
     #introductory-paragraph {
-        width: 100vw;
+        width: 100%;
         justify-self: center;
         align-items: center;
         border: none;
-
+        margin-bottom: 5vh;
     }
 
     #abt-me-p {
@@ -467,7 +535,7 @@ footer {
     }
 
     #soft-skills {
-        width: 100vw;
+        width: 100%;
         justify-content: center;
     }
 
@@ -475,6 +543,179 @@ footer {
     #techskills-list {
         width: 100%;
         display: grid;
-        grid-template-columns: 400PX 400PX;
+        grid-template-columns: 400px 400px;
+    }
+}
+
+@media (max-width:1100px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .interest-pt {
+        width: 100%;
+        background-color: #09030f;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #hero {
+        height: 96.5vh;
+    }
+
+    /* =============================================================INTERESTS============================================================= */
+
+}
+
+@media (max-width:900px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+}
+
+@media (max-width: 800px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .menu-btn {
+        display: block
+    }
+
+    .reference {
+        display: none;
+    }
+
+    #Icarus-Credit {
+        margin: 0;
+    }
+
+    #techskills-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 400px;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #Icarus {
+        font-size: 2rem;
+    }
+
+    #icarus-quote {
+        width: 100%;
+        height: 50%;
+    }
+
+    #Icarus-Credit {
+        margin: 0;
+    }
+
+    #hero-pic {
+        width: 100%;
+        height: 50%
+    }
+
+    #abt-me-p {
+        padding: 25px;
+    }
+
+    /* =============================================================TECHSKILLS============================================================= */
+    #techskills-list {
+        max-width: 300px;
+    }
+
+    #techskills-list li {
+        max-width: 300px;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .technicalSkill-pt {
+        margin: 0;
+        padding: 0;
+        max-width: 300px;
+    }
+
+    .techskill-pic {
+        max-width: 128px;
+    }
+
+    /* =============================================================INTERESTS============================================================= */
+    .interest-block h5 {
+        font-size: 2rem;
+    }
+
+    .interest-block p {
+        padding: 5px;
+    }
+}
+
+@media (max-width:450px) and (min-height:900px) {
+    html {
+        width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #hero {
+        height: 95.2vh;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 376px) {
+    #softskills-title {
+        margin-top: 6rem;
     }
 }
