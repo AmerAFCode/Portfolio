@@ -1,12 +1,16 @@
 body {
     margin: 0;
-
+    overflow-x:hidden;
     background: linear-gradient(135deg, #dfdfdf 0%, #fefdff 100%)
 }
 
+.page {
+    padding: 5vh 0 0 0;
+}
+
 .page-separator {
-    align-content: center;
-    width: 100%
+    display: flex;
+    justify-content: center;
 }
 
 hr {
@@ -21,8 +25,8 @@ html {
     scroll-behavior: smooth;
 }
 
-#iWannaMaketheNavBarSticky {
-    position: relative;
+main {
+    height: auto;
 }
 
 /* ===== Title thing ===== */
@@ -102,7 +106,7 @@ html {
 nav {
     position: sticky;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 6vh;
     padding: 0px;
     margin-top: 1px;
@@ -112,7 +116,7 @@ nav {
     justify-content: space-evenly;
 
     background: #220b39;
-
+    z-index: 9998;
 }
 
 #logo {
@@ -160,7 +164,7 @@ nav {
 #abt-me-section {
     display: flex;
     width: 100%;
-    height: 85vh;
+    height: AUTO;
     margin: 20px 0px;
 }
 
@@ -173,6 +177,9 @@ nav {
 }
 
 #soft-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     height: 100%;
 }
@@ -217,6 +224,7 @@ nav {
     border-bottom: 2px solid rgb(169, 169, 169);
 
     font-family: "Zilla Slab", serif;
+    text-align: center;
 }
 
 .softskills-pt:hover {
@@ -224,6 +232,9 @@ nav {
     position: relative;
     transform: translateY(-15px);
     transition: transform 0.3s ease-in-out;
+
+    text-align: center;
+    align-content: center;
 }
 
 .softskills-pic {
@@ -235,16 +246,15 @@ nav {
 /* ============================================================= SKILLS ============================================================= */
 #Technical-Skills {
     width: 100%;
-    height: 70vh;
+    height: auto;
 }
 
 #techskills-list {
     list-style-type: none;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
     justify-content: center;
+    align-items: center;
     gap: 20px;
 
     margin-top: 50px;
@@ -296,40 +306,47 @@ nav {
 /* =============================================================INTERESTS=============================================================*/
 #interests-page {
     width: 100%;
-    height: 30vh;
+    height: auto;
+    margin-bottom: 5vh
 }
 
 #interests-list {
     list-style-type: none;
-
+    padding: 0;
+    margin: 3rem 0 0 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* gap: 20px; */
-
-    margin-top: 50px;
-    padding-left: 0;
-
-    width: 100%;
+    gap: 3vh;
 }
 
-
 .interest-pt {
-    background-color: #1a0b2e;
-    color: white;
-    padding: 15px;
-    margin: 30px 20px 0px 20px;
+    width: 100%;
 
-    font-family: "Zilla Slab", serif;
+
+    background-color: #09030f;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .interest-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    text-align: Center;
+    align-content: center;
+    color: white;
+}
+
+.interest-block h5 {
+    font-size: 3rem
+}
+
+.interest-pic-credit {
+    font-size: 1rem;
+    color: gray;
+}
+
+.interest-pic-credit a {
+    color: gray
 }
 
 .interests-pic {
@@ -338,27 +355,31 @@ nav {
     max-height: 400px;
 }
 
-.interest-pic-caption {
-    width: 100%;
-}
-
-
 /* =============================================================FOOTER=============================================================*/
 /* =============================================================FOOTER=============================================================*/
 /* =============================================================FOOTER=============================================================*/
 footer {
-    max-height: 40vh;
+    max-height: 50vh;
     background-color: #1a0b2e;
     color: aliceblue;
+
+    display: flex;
+    align-items: Center;
 }
 
 .footer {
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 80%;
+    height: 30vh;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    font-size: 24px
+    font-size: 24px;
+    border-left: 2px solid gray
 }
 
 .footer p {
@@ -366,4 +387,94 @@ footer {
     padding: 0px;
 
     font-size: 24px
+}
+
+#lwkidekwhattonametheseanymoreimsick {
+    border: 2rem solid #1a0b2e;
+    padding: 1rem;
+    background-color: white;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+#ContactMe {
+    margin-top: 2vh;
+    text-align: center;
+    color: black
+}
+
+/* TEXTBOXES */
+#name {
+    margin-bottom: 3vh;
+    max-height: 2vh;
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    color: White;
+}
+
+#email {
+    margin-bottom: 3vh;
+    max-height: 2vh;
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+#message {
+    max-height: 5vh;
+
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+#SubmitBtn {
+    border: none;
+    background-color: #1a0b2e;
+    color: white;
+}
+
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+/* ============================================================= RESPONSIVENESS ============================================================= */
+@media (max-width: 1000px) {
+    #abt-me-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #introductory-paragraph {
+        width: 100vw;
+        justify-self: center;
+        align-items: center;
+        border: none;
+
+    }
+
+    #abt-me-p {
+        padding: 25px 50px;
+        margin: 0;
+
+        font-size: 1.5rem;
+    }
+
+    #soft-skills {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    /* =============================================================TECHSKILLS============================================================= */
+    #techskills-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 400PX 400PX;
+    }
 }
