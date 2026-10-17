@@ -114,7 +114,7 @@ nav {
 
 nav ul {
     list-style-type: none;
-    padding:0;
+    padding: 0;
 }
 
 .menu-btn {
@@ -573,10 +573,6 @@ footer p {
         overflow-x: hidden;
     }
 
-    #hero {
-        height: 96.5vh;
-    }
-
     /* =============================================================INTERESTS============================================================= */
 
 }
@@ -663,22 +659,27 @@ footer p {
     }
 
     /* =============================================================TECHSKILLS============================================================= */
+    #Technical-Skills {
+        width:100%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
     #techskills-list {
-        max-width: 300px;
+        width: 100%;
     }
 
     #techskills-list li {
-        max-width: 300px;
         width: 100%;
-
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
     }
 
     .technicalSkill-pt {
         margin: 0;
         padding: 0;
-        max-width: 300px;
+        width: 100%;
     }
 
     .techskill-pic {
