@@ -605,6 +605,10 @@ footer p {
         display: none;
     }
 
+    #hero {
+        height:95vh
+    }
+    
     #Icarus-Credit {
         margin: 0;
     }
@@ -660,13 +664,16 @@ footer p {
 
     /* =============================================================TECHSKILLS============================================================= */
     #Technical-Skills {
-        width:100%;
+        width: 100%;
+
 
         justify-content: center;
         align-items: center;
     }
 
     #techskills-list {
+        display: flex;
+        flex-direction: column;        
         width: 100%;
     }
 
@@ -716,7 +723,20 @@ footer p {
 }
 
 @media (max-width: 376px) {
+#hero {
+    height:91vh;
+}
+
+    #abt-me-p {
+        font-size: 1rem;
+    }
+
     #softskills-title {
-        margin-top: 6rem;
+        margin-top: 4rem;
+    }
+
+    #techskills-list {
+        display: flex;
+        flex-direction: column;
     }
 }
