@@ -349,6 +349,41 @@ nav li:first-child {
     padding-top: 2rem;
 }
 
+#project-div #projects-list {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#project-div #projects-list li {
+    margin: 2rem;
+    padding: 1rem;
+
+    background-color: #1a0b2e;
+    border: 1px solid #1a0b2e;
+    border-radius: 12px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#project-div #projects-list li .likethis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#project-div #projects-list li .likethis img {
+    width: 100%;
+    height: 100%
+}
+
 /* =============================================================INTERESTS=============================================================*/
 /* =============================================================INTERESTS=============================================================*/
 /* =============================================================INTERESTS=============================================================*/
@@ -573,8 +608,12 @@ footer p {
         overflow-x: hidden;
     }
 
-    /* =============================================================INTERESTS============================================================= */
-
+    /* =============================================================Projects============================================================= */
+    #project-div #projects-list {
+        display:flex;
+        flex-direction:column;
+        
+    }
 }
 
 @media (max-width:900px) {
@@ -606,9 +645,9 @@ footer p {
     }
 
     #hero {
-        height:95vh
+        height: 95vh
     }
-    
+
     #Icarus-Credit {
         margin: 0;
     }
@@ -673,7 +712,7 @@ footer p {
 
     #techskills-list {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         width: 100%;
     }
 
@@ -723,9 +762,9 @@ footer p {
 }
 
 @media (max-width: 376px) {
-#hero {
-    height:91vh;
-}
+    #hero {
+        height: 91vh;
+    }
 
     #abt-me-p {
         font-size: 1rem;
