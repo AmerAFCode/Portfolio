@@ -377,6 +377,8 @@ nav li:first-child {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    height: 100%;
 }
 
 #project-div #projects-list li .likethis img {
@@ -610,9 +612,9 @@ footer p {
 
     /* =============================================================Projects============================================================= */
     #project-div #projects-list {
-        display:flex;
-        flex-direction:column;
-        
+        display: flex;
+        flex-direction: column;
+
     }
 }
 
